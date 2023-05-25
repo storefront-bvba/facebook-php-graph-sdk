@@ -34,10 +34,6 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
 
         $field = $graphNode->getField('foo');
         $this->assertEquals('bar', $field);
-
-        // @todo v6: Remove this assertion
-        $property = $graphNode->getProperty('foo');
-        $this->assertEquals('bar', $property);
     }
 
     public function testAMissingPropertyWillReturnNull()
@@ -85,9 +81,6 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
         $fieldNames = $graphNode->getFieldNames();
         $this->assertEquals(['key1', 'key2', 'key3'], $fieldNames);
 
-        // @todo v6: Remove this assertion
-        $propertyNames = $graphNode->getPropertyNames();
-        $this->assertEquals(['key1', 'key2', 'key3'], $propertyNames);
     }
 
     public function testAnArrayCanBeInjectedViaTheConstructor()
