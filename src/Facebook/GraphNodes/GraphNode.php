@@ -94,14 +94,7 @@ class GraphNode extends Collection
         }, $items);
     }
 
-    /**
-     * Get the collection of items as JSON.
-     *
-     * @param int $options
-     *
-     * @return string
-     */
-    public function asJson($options = 0)
+    public function asJson($options = 0) : string
     {
         return json_encode($this->uncastItems(), $options);
     }

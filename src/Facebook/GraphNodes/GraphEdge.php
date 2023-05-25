@@ -236,10 +236,7 @@ class GraphEdge extends Collection
         return null;
     }
 
-    /**
-     * @inheritDoc
-     */
-    public function map(\Closure $callback)
+    public function map(\Closure $callback) :static
     {
         return new static(
             $this->request,
